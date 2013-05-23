@@ -10,10 +10,13 @@ var GeoView = function() {
     this.el.html(GeoView.template());
     window.onload = function() {
           var map = new GoogleMap();
-          map.initialize();}
+          map.initialize();
+          }
     return this;
   }
 }
 
 GeoView.template = Handlebars.compile($("#geo").html());
+
+
 

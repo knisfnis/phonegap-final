@@ -62,9 +62,9 @@ var app = {
 	    	$('body').html(new HomeView().render().el);
 	    }
 	}
-
-
-
+	
+	
+	
 
 };
 

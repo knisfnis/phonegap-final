@@ -50,3 +50,8 @@ function addMyCoordinatesToMap() {
 		document.getElementById("jsFyllerMedTekst").innerHTML = "Fikk ikke GPS'en din til å virke.";
 	}
 }
+
+function loadMap() {
+          var map = new GoogleMap();
+          map.initialize();
+}

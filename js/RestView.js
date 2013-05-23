@@ -7,8 +7,7 @@ var RestView = function() {
 	
 	this.getTweets = function() {
 		
-	    var twurl = "https://api.twitter.com/1/statuses/user_timeline.json?screen_name=mesan&include_rts=true&include_entities=true&count=10";
-//	    var twurl = "http://search.twitter.com/search.json?q=from:mesan&rpp=10&callback=?";
+	    var twurl = "http://search.twitter.com/search.json?q=mesan&rpp=10&callback=?";
 	    
 	    $.getJSON(twurl, function(data){
 	    	$('.tweet-list').html(RestView.liTemplate({tweet: data}));

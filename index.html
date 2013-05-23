@@ -31,9 +31,6 @@
     </ul>
   <img class="bilde" id="bilde"/>
   <input class="button" type="button" id="lagreBilde" value="Lagre bilde" />
-    <table id="bilder">
-
-    </table>
 </script>
 
 <script id="rest-tpl" type="text/x-handlebars-template">
@@ -46,7 +43,7 @@
 </script>
 
 <script id="rest-li-tpl" type="text/x-handlebars-template">
-  		{{#each tweet}}
+  		{{#each tweet.results}}
   		<li>
 			<img src="{{this.profile_image_url}}" alt="${this.from_user}">
 			<p><b>Fra:</b> {{this.from_user}}</p>
@@ -65,7 +62,8 @@
 
         Lengdegrad: <input type="text" id="lng"/><br />
         Breddegrad: <input type="text" id="lat"/><br />
-        <input class="button" onclick="addTheseCoordinatesToMap();" type="button" id="leggMegTilKart" value="Legg koordinater til kart" /><br /><br />
+        <input class="button" onclick="window.location.reload();" type="button" id="lastKart" value="Last kart" /><br />
+        <input class="button" onclick="addTheseCoordinatesToMap();" type="button" id="leggMegTilKart" value="Legg koordinater til kart" /><br />
         <input class="button" onclick="addMyCoordinatesToMap();" type="button" id="markerMinLokasjon" value="Marker min lokasjon" />
 
     <div id="map_canvas"></div>
